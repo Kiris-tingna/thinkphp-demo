@@ -1,0 +1,33 @@
+<extend name="Common/Template" />
+
+<block name="css">
+	<!-- 自开发样式 -->
+	<css file="__LESS__/core.css" /><!-- 核心通用编译版本 -->
+	<css file="__LESS__/Ppt-style.css" /><!-- 个性组件编译版本 -->
+</block>
+
+<block name="Nav">
+	<header>
+		<h1 class="ss">{$title}</h1>
+	</header>
+</block>
+
+<block name="Ppt">
+	<!-- num为测试参数 -->
+	{:W('Ppt',array('num'=>1))}
+</block>
+
+<block name="js">
+	<!-- 通用插件 -->
+ 	<js file="__JS__/jquery.js" />
+ 	<js file="__JS__/jquery.easing.min.js"/>
+ 		<!-- 插件 -->
+ 	<js file="__JS__/lcy.slider.js" />
+</block>
+
+<block name="set">
+	<script type="text/javascript">
+	//幻灯片设置参数设置
+	$('#ppt').cubeslider({});
+	</script>
+</block>

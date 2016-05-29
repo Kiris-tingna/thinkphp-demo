@@ -1,0 +1,107 @@
+#ppt{
+	// #ppt
+	// ---slide_Feed
+	// ---slide_Content
+	//    ---
+	//       ---
+	//       ---
+	// 
+	@ppt_w: 900px;
+	@ppt_h: 500px;
+	@ppt_bg:#24241f;
+	width: @ppt_w;
+	height: @ppt_h;
+	position: relative;
+	border-left: 1px solid @ppt_bg;
+	border-top:  1px solid @ppt_bg;
+	.border-box();
+
+	// 源
+	.slide_Feed
+	{
+		display: none !important;
+	}
+	// 填充层
+	.slide_Content
+	{
+		position: relative;
+		background: @ppt_bg;
+		// 方块
+		.cube
+		{
+			position: absolute;
+			overflow: hidden;
+			// a层在上
+			.inner_a
+			{
+				position: absolute;
+				overflow: hidden;
+				z-index: 2;
+			}
+			// b层在下
+			.inner_b
+			{
+				position: absolute;
+				overflow: hidden;
+				z-index: 1;
+			}
+		}
+	}
+	// 控制层
+	.slide_Handel
+	{
+		position:absolute;
+		z-index: 	2;
+		right: 		0;
+
+		.slide_Info
+		{
+			position: relative;
+			min-width: 300px;
+			height: 70px;
+			line-height: 70px;
+			// 颜色
+			background-color: #333;
+			.opacity(0.7);
+
+			text-align: right;
+			
+			a
+			{
+				position: relative;
+				display:block;
+				font-size:48px;
+				text-decoration: none;
+				color:#fff;
+				.opacity(1);
+			}
+		}
+		.slide_Nav{
+			position: absolute;
+			right: 0px;
+			background-color: #333;
+			.opacity(0.7);
+
+			margin: 0px;
+			padding: 10px 10px;
+			ul{
+				display: block;
+				position: relative;
+				list-style-type: none;
+				li{
+					width: 9px;
+					height: 9px;
+					float: left;
+					cursor: pointer;
+					margin-right: 8px;
+					.radius(50%);
+					background-color: #fff;
+
+					&.active{
+						background-color: #ff0; 
+					}
+				}
+			}
+		}
+	}
+}

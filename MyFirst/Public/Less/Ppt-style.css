@@ -1,0 +1,95 @@
+@charset "utf-8";
+#ppt {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  border-left: 1px solid #24241f;
+  border-top: 1px solid #24241f;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#ppt .slide_Feed {
+  display: none !important;
+}
+#ppt .slide_Content {
+  position: relative;
+  background: #24241f;
+}
+#ppt .slide_Content .cube {
+  position: absolute;
+  overflow: hidden;
+}
+#ppt .slide_Content .cube .inner_a {
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+#ppt .slide_Content .cube .inner_b {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+#ppt .slide_Handel {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+#ppt .slide_Handel .slide_Info {
+  position: relative;
+  min-width: 300px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #333;
+  filter: alpha(opacity= 70);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -khtml-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  text-align: right;
+}
+#ppt .slide_Handel .slide_Info a {
+  position: relative;
+  display: block;
+  font-size: 48px;
+  text-decoration: none;
+  color: #fff;
+  filter: alpha(opacity= 100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+#ppt .slide_Handel .slide_Nav {
+  position: absolute;
+  right: 0px;
+  background-color: #333;
+  filter: alpha(opacity= 70);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -khtml-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  margin: 0px;
+  padding: 10px 10px;
+}
+#ppt .slide_Handel .slide_Nav ul {
+  display: block;
+  position: relative;
+  list-style-type: none;
+}
+#ppt .slide_Handel .slide_Nav ul li {
+  width: 9px;
+  height: 9px;
+  float: left;
+  cursor: pointer;
+  margin-right: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#ppt .slide_Handel .slide_Nav ul li.active {
+  background-color: #ff0;
+}
