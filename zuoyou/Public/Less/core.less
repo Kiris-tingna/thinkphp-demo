@@ -1,0 +1,42 @@
+// 核心通用less样式控制
+@import "setting";
+@import "normalize.css";//消除样式差异
+// 样式预设
+body{
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;//网页字体抗锯齿
+}
+div,span,form,ul,li{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	// 边框盒模型
+    .border-box();
+}
+.clearfix{
+	zoom: 1;/*为了兼容ie6 7*/
+}
+.clearfix:after{
+	content: '020';/*看不见的空格*/
+	display: block;
+	height: 0px;
+	clear: both;/*清楚浮动*/
+	visibility: hidden;
+}
+.l{
+	float: left;
+}
+.r{
+	float: right;
+}
+// 主体样式 container 容器
+.container{
+	width: 1000px;
+	margin: 0px auto;
+	min-height: 500px;
+}
+// 预定义样式 bg占位符
+.bg{
+	background: #d5d5d5;
+}

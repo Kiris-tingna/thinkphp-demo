@@ -1,0 +1,100 @@
+// #id =cate
+// 分类页
+.categoery{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	margin: 20px 0px;
+	.cate-nav{
+		width: 300px;
+		height: 100%;
+		background: #fff;
+		border-left: 1px solid #e3e3e3;
+		border-top: 1px solid #e3e3e3;
+		border-bottom: 1px solid #e3e3e3;
+		// .opacity(0.5);
+		.cate-item{
+			height: 100px;
+			overflow: hidden;
+			border-bottom: 1px solid #e3e3e3;
+			&:last-child{border-bottom: none;}
+			.cate-head{
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				color: #333;
+				i{ margin: 0px 8px; color: #f4a460}
+			}
+			.cate-item-b{
+				display: block;
+				padding: 0px 15px;
+				li{
+					display: block;
+					width: 85px;
+					line-height: 30px;
+					font-size: 12px;
+					color: #666;
+					text-align: left;
+					i{margin: 0px 2px; color: #6495ed}
+				}
+			}
+		}
+		
+	}
+	.cate-body{
+		position: relative;
+		width: 700px;
+		height: 100%;
+		border: 1px solid #e3e3e3;
+		.cate-image{
+			width: 690px;
+			height: 390px;
+			margin: 4px auto;
+		}
+		.cate-text{
+			position: absolute;
+			top: 200px;
+			left:200px;
+			font-size: 20px;
+			color: #fff;
+
+		}
+	}
+}
+.cate-main{
+	.main-head{
+		margin-bottom: 10px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 30px;
+		span{
+			display: inline-block;
+			background-color: #9370db;
+			color: #fff;
+			margin-right: 10px;
+			padding: 0px 10px; 
+			.radius(2px);
+			i{margin-right:5px;}
+		}
+	}
+	.main-result{
+		ul{
+			.main-row{
+				.main-li{
+					width: 235px;
+					height: 320px;
+					margin-left: 20px;
+					margin-bottom: 20px;
+
+					&:first-child{ margin-left: 0px;}
+					.main-image{
+						width: 235px;
+						height: 320px;
+					}
+				}
+			}
+			
+		}
+	}
+}

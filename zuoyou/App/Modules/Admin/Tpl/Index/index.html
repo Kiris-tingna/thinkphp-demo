@@ -1,0 +1,35 @@
+<extend name="Common:template" /> 
+
+<block name="container">
+	<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Memory</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav" id="mynav">
+					<li class="active"><a href="{:U('Index/index')}">首页</a></li>
+					<if condition="authcheck('Admin/Auth/index',$_SESSION['uid'])">
+					<li><a href="{:U('Auth/index')}">权限</a></li>
+					</if>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{$Think.session.username} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{:U('Login/logout')}">退出</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->			
+		</nav>
+	</div>
+</block>
+
+<block name="container">
+	<div class="container">
+		<h1><small>这是后台首页</small></h1>
+	</div>
+</block>

@@ -1,0 +1,50 @@
+@import "normalize.css";
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+}
+div,
+span,
+form,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix {
+  zoom: 1;
+  /*为了兼容ie6 7*/
+
+}
+.clearfix:after {
+  content: '020';
+  /*看不见的空格*/
+
+  display: block;
+  height: 0px;
+  clear: both;
+  /*清楚浮动*/
+
+  visibility: hidden;
+}
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.container {
+  width: 1000px;
+  margin: 0px auto;
+  min-height: 500px;
+}
+.bg {
+  background: #d5d5d5;
+}

@@ -1,0 +1,22 @@
+<?php if (!defined('THINK_PATH')) exit();?><div class="box">
+	<!-- 容器层 -->
+	<div class="banner clearfix">
+		<div class="BPics">
+			<a href="#"><img src="__PUBLIC__/Image/ttt.jpg" /></a>
+			<a href="#"><img src="__PUBLIC__/Image/ttt2.jpg" /></a>
+			<a href="#"><img src="__PUBLIC__/Image/ttt.jpg" /></a>
+			<a href="#"><img src="__PUBLIC__/Image/ttt2.jpg" /></a>
+			<a href="#"><img src="__PUBLIC__/Image/ttt.jpg" /></a>
+		</div>
+		<div class="BHans l">
+			<ul>
+				<li class="BHansControl"><span>第一张</span><p>这是一些说明文字，啦啦啦啦啦啦啦啦啦啦啦啦</p></li>
+				<li class="BHansControl"><span>第二章</span><p>这是一些说明文字，啦啦啦啦啦啦啦啦啦啦啦啦</p></li>
+				<li class="BHansControl"><span>第三张</span><p>这是一些说明文字，啦啦啦啦啦啦啦啦啦啦啦啦</p></li>
+				<li class="BHansControl"><span>第四张</span><p>这是一些说明文字，啦啦啦啦啦啦啦啦啦啦啦啦</p></li>
+				<li class="BHansControl"><span>第五张</span><p>这是一些说明文字，啦啦啦啦啦啦啦啦啦啦啦啦</p></li>
+				<div class="BPblockBg"></div>
+			</ul>
+		</div>
+	</div>
+</div>

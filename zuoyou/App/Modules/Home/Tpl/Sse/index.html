@@ -1,0 +1,24 @@
+<extend name="Index/default"/>
+	<block name="Menu">sse测试</block>
+	<block name="Ppt"><span id="sse-frame">框架初始化</span></block>
+	<block name="js">
+		<js file="__JS__/jquery.js" />
+		<!-- sse对象 -->
+		<script type="text/javascript">
+			var url ="{:U(GROUP_NAME.'/Sse/push')}";
+			var es = null;
+			if(es) {
+				es.close();
+				es= null;
+			}
+			window.onbeforeunload = function(){  
+    			es.close();
+    			es= null;
+  			}
+			es = new EventSource(url);
+			es.addEventListener("message",function(e){
+				// 回调函数
+				$("#sse-frame").append(e.data + '<br/>');
+			},false);
+		</script>
+	</block>

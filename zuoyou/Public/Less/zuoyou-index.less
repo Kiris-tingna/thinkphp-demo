@@ -1,0 +1,502 @@
+// ################主页index的css管理##################
+// #id = nav
+// 头部css
+.nav
+{
+	width: 100%;
+	height: 101px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	div
+	{
+		font-size: 14px;
+		display: block;
+		color:#333;
+	}
+
+	.nav-wrap
+	{
+		width: 1000px;
+		margin: 0px auto;
+
+		.logo
+		{
+			width: 200px;
+			padding: 15px 0px;
+			text-align: center;
+			position: relative;
+			.nav-bg
+			{
+				position: relative;
+				border:  1px solid #eee;
+				width: 180px;
+				height: 70px;
+				background: #d5d5d5;
+			}
+			.nav-text
+			{
+				position: absolute;
+				top:30px;
+				left: 20px;
+				height: 20px;
+				line-height: 20px;
+				color: #fff;
+			}
+		}
+	}
+	.nav-ul
+	{
+		position: relative;
+		display: block;
+		width: auto;
+		height: 35px;
+		line-height: 35px;
+		padding: 0px;
+		margin-top: 50px;
+		li
+		{
+			display: block;
+			float: left;
+			font-size: 14px;
+			margin: 0px;
+			width: 100px;
+			text-align: center;
+			height: 35px;
+			line-height: 35px;
+
+			&.active{
+				background: #ccc;
+				color: #fff
+			}
+		}
+	}
+
+	.nav-login
+	{
+		font-size: 12px;
+		a{
+			display: inline-block;
+			margin: 0;
+			padding: 0px 20px;
+			height: 50px;
+			line-height: 50px;
+			color: #333;
+			text-decoration: none;
+			vertical-align: top;
+		}
+	}
+	.nav-search
+	{
+		width: 300px;
+		margin: 30px 100px;
+		.w-search
+		{
+			display: block;
+			position: relative;
+			.w-text
+			{
+				display: block;
+				padding-right: 36px !important;
+				.w-input
+				{
+					text-align: left;
+					line-height: 20px;
+					height: 20px;
+					width: 100%;
+					padding: 6px 24px 6px 10px;
+					border: 1px solid #ccc;
+					.radius(3px);
+					//font: -webkit-small-control;
+					font-size: 12px;
+				}
+			}
+			.w-icon
+			{
+				line-height: 100%;
+				position: absolute;
+				top:50%;
+				margin-top: -10px;
+				right: 6px;
+				height: 20px;
+				width: 20px;
+				border: none;
+				background-color: transparent;
+				font-size: 12px;
+			}
+		}
+		
+	}
+//nav 结束
+}
+// # id= banner
+// 幻灯片
+.banner{
+	margin: 15px 0px 50px 0px;
+	.ban-pic
+	{
+		width: 100%;
+		height: 450px;
+		position: relative;
+		span
+		{
+			position: absolute;
+			color: #fff;
+
+			&.ba{
+				font-size: 30px;
+				top: 200px;
+				left:450px;
+			}
+			&.prev{
+				font-size: 50px;
+				top: 200px;
+				left:0px;
+			}
+			&.next{
+				font-size: 50px;
+				top: 200px;
+				right:0px;
+			}
+			
+		}
+	}
+}
+// # id= brea
+// 小展示区
+.brea{
+	@pic-1-w:450px;
+	@pic-1-h:390px;
+	@pic-2-w:255px;
+	@pic-2-h:185px;
+	@info-h:76px;
+	@info-h-s:42px;
+	margin-bottom: 10px;
+	h3.brea-tit
+	{
+		font-weight: 500;
+		font-size: 24px;
+		height: 24px;
+		line-height: 24px;
+		color: #666;
+	}
+	.brea-tit-b
+	{
+		@tit-w:380px;
+		@tit-s:150px;
+		position: relative;
+		display: inline-block;
+		width: @tit-w;
+		height: 8px;
+		margin-left: 20px;
+		
+		border-top:1px solid #ddd;
+		.brea-warp{
+			background: #fff;
+			padding: 0px 10px;
+			position: absolute;
+			top:-9px;
+			left:@tit-w / 2 - @tit-s / 2;
+			width: @tit-s;
+			font-size: 12px;
+			height: 18px;
+			line-height: 18px;
+			span{
+				display: block;
+				width: auto;
+				text-align: center;
+				padding: 0px 10px;
+				background: #9999FF;
+				color: #fff;
+				vertical-align: bottom;
+				.radius(2px);
+			} 
+		}
+		
+	}
+	.brea-pic-1
+	{
+		width:  @pic-1-w;
+		height: @pic-1-h;
+		.brea-img{
+			display: block;
+			width: @pic-1-w;
+			height: @pic-1-h - @info-h;
+		}
+	}
+	.brea-pic-2 
+	{
+		width:  @pic-2-w;
+		height: @pic-2-h;
+		margin-bottom: 20px;
+		.brea-img{
+			display: block;
+			width:  @pic-2-w;
+			height: @pic-2-h - @info-h-s;
+		}
+	}
+	.topic
+	{
+		width: 725px;
+		height: 390px;
+		.topic-l
+		{
+			width: 450px;
+			height: 390px;
+		}
+		.topic-s
+		{
+			width: 255px;
+			height: 390px;
+		}
+	}
+	.side
+	{
+		width: 275px;
+		height: 390px;
+		.side-b
+		{
+			width: 255px;
+			height: 390px;
+			margin-left: 20px;
+		}
+		.side-c
+		{
+			width: 255px;
+			height: 390px;
+			margin-right: 20px;
+		}
+	}
+	.info-warp .brea-in-tit{
+		font-size: 14px;
+		padding: 6px 8px;
+	}
+	.info-warp .price-info {
+		i{font-size: 18px;color: #FF6666;}
+		span{ 
+			font-size: 14px;
+			color: #fff;
+			width: 50px;
+			background-color:#FF6666; 
+		}
+	}
+	.info-warp-s .brea-in-tit{
+		font-size: 12px;
+		padding: 2px 8px;
+	}
+	.info-warp-s .price-info {
+		i{font-size: 14px;color: #999;}
+		span{ 
+			font-size: 12px;
+			color: #999;
+			width: 30px;
+			vertical-align: top;
+			background-color:transparent; 
+		}
+	}
+	.info-warp{ height: @info-h;}
+	.info-warp-s{height: @info-h-s;}
+	// 文字部分
+	.info-warp,.info-warp-s
+	{
+		display: block;
+		position: relative;
+		width: 100%;
+		
+		.brea-info{
+			position: relative;
+			display: block;
+			width: 100%;
+			height:auto;
+			font-size: 12px;
+			line-height: 18px;
+			color: #333;
+			.brea-in-tit{
+				position: relative;
+				margin: 0px;
+				font-weight: 500;
+			}
+			.brea-in-p{
+				display: block;
+				padding: 0px 8px 4px 8px;
+				color: #c6c6c6;
+				margin:0px;
+				.nowarp();
+			}
+		}
+		.brea-g{
+			width: 100%;
+			height: 20px;
+			position: relative;
+			display: block;
+			padding: 0px 8px;
+			line-height: 18px;
+
+			.price-info{
+				width: 100px;
+				height: 20px;
+				
+				line-height: 18px;
+
+				i{line-height: 18px;vertical-align:baseline;}
+				span{ 
+					display: inline-block;
+					line-height: 18px; 
+					height: 20px;
+					margin-left: 4px;
+					
+					text-align: center;
+				}
+			}
+
+			.appre-info{
+				position: relative;
+				height: 20px;
+				i{font-size: 12px; line-height: 18px;color: #333;vertical-align:baseline; }
+				span{
+					font-size: 12px;
+					line-height: 18px;
+					height: 20px;
+					margin-left: 6px;
+				}
+			}
+		}
+		
+	}
+	
+}
+// # id= show
+// 成排展示区
+.show
+{
+	width: 100%;
+	position: relative;
+	margin-top: 50px;
+	h3.brea-tit
+	{
+		font-weight: 500;
+		font-size: 24px;
+		height: 24px;
+		line-height: 24px;
+		color: #666;
+	}
+	.row
+	{
+		width: 1020px;
+		position: relative;
+		
+		.show-pic
+		{
+			width: 235px;
+			height: 360px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			.show-img{
+				display: block;
+				width: 235px;
+				height: 260px;
+			}
+		}
+
+		.show-info{
+			width: 100%;
+			height: 84px;
+			margin-top: 15px;
+			.show-in-tit
+			{
+				display: block;
+				height: 24px;
+				font-size: 16px;
+				line-height: 24px;
+				color: #333;
+				padding: 0px 4px;
+			}
+			.show-in-des
+			{
+				display: block;
+				font-size: 12px;
+				line-height: 20px;
+				height: 40px;
+				color: #ccc;
+				overflow: hidden;
+			}
+			.show-g
+			{
+				width: 100%;
+				height: 20px;
+				line-height: 20px;
+				display: block;
+				padding: 0px 4px;
+				color: #555;
+				.price-info{
+					i{font-size: 14px; line-height: 18px;color: #333;vertical-align:baseline;}
+					span{
+						height: 20px;
+						margin-left: 4px;
+					}
+				}
+				.appre-info{
+					i{font-size: 12px; line-height: 18px;color: #333;vertical-align:baseline;}
+					span{
+						height: 20px;
+						margin-left: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+// # id=footer
+// 脚部
+#footer{
+	margin-top: 10px;
+	background: #eee;
+	.footer-inner
+	{
+		position: relative;
+		margin: 0 auto;
+		text-align: left;
+		width: 1000px;
+		padding: 20px 0px 20px 0px;
+
+		.footer-top
+		{
+			height: 110px;
+			.unit
+			{
+				border-right: 1px solid #eee;
+				float: left;
+				height: 100%;
+				padding: 8px 0px 8px 28px;
+				width: 170px;
+
+				div.a{
+					font-size: 14px;
+					margin-bottom: 16px;
+				}
+				div.b{
+					font-size: 12px;
+					a{
+						display: block;
+						float: left;
+						margin: 0px 16px 6px 0px;
+						color: #999;
+						text-decoration: none;
+
+						&:hover{
+							color: #e04270;
+						}
+					}
+				}
+			}
+		}
+		.footer-bottom
+		{
+			text-align: center;
+			p{
+				margin: 5px;
+				color: #999;
+				line-height: 1.5;
+			}
+		}
+	}
+}

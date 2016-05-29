@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- html5 文档结构 -->
+<html lang="zh-CN">
+<head>
+	<block name="title"><title>{$title}</title></block>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- css部分 -->
+	<block name="css">
+		<css file="__CSS__/font-awesome.min.css" />
+		<css file="__LESS__/core.css" />
+		<css file="__LESS__/style.css" />
+	</block>
+</head>
+<body>
+	<block name="nav">
+		<!-- \\\tou\\\\ -->
+		<include file="Common:h"/>
+	</block>
+
+	<div class="container">
+		<!-- container宽度1000px -->
+		<block name="banner"><!--首页特有--></block>
+		<block name="area">  <!--共有主体--></block>
+		<block name="push">  <!--首页特有--></block>
+		<!-- 页面三部分 -->
+	</div>
+
+	<block name="footer">
+		<!-- \\\wei\\\\ -->
+		<include file="Common:f"/>
+	</block>
+ 	<!-- js部分 -->
+	<block name="js">
+		<js file="__JS__/jquery.js" />
+		<!-- <js file="__JS__/work.js" /> -->
+	</block>
+	<block name="set">
+		<script type="text/javascript">
+			$(function() {
+				$(".nav-ul").find('li').eq(0).addClass('active').siblings().removeClass('active');
+			});
+		</script>
+	</block>
+</body>
+</html>

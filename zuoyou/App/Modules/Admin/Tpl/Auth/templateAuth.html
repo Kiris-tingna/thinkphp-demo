@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- meta 渲染最高版本ie内核 -->
+	<meta name="renderer" content="webkit"><!-- 页面需默认用极速核 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="copyright" 	content="内容"><!-- 版权 -->
+	<meta name="keywords" 	content="内容"><!-- 关键字 -->
+	<meta name="description"content="内容"><!-- 描述 -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+	<title>{$auth_tit}</title>
+	<css file="__ADMIN__/Css/bootstrap.min.css" />
+	<block name="css">
+	</block>
+</head>
+<body>
+	<!-- 头部文件 -->
+	<block name="head">
+		<include file="Common:h"/>
+	</block>
+	<!-- 左列边 -->
+	<block name="left">
+	</block>
+	<!-- 主体 -->
+	<block name="container">
+	</block>
+	<!-- 脚本文件 -->
+	<js file="__JS__/jquery.js" />
+	<js file="__ADMIN__/Js/bootstrap.min.js" />
+	<block name="script">
+		<!-- Auth 的 js控制 -->
+	<script type="text/javascript">
+	$(function(){
+		//菜单高亮
+		$("#mynav li").eq(1).addClass('active').siblings().removeClass('active');
+	});
+	</script>
+	</block>
+</body>
+</html>

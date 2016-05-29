@@ -1,0 +1,119 @@
+// # id= waterfall
+// 瀑布流布局
+.waterfall
+{
+	@waterfall_w :1000px;
+	@waterfall_i :20px;
+	@waterfall_l :( @waterfall_w - 3 * @waterfall_i ) / 4 ;
+	width: 100%;
+	position: relative;
+	.waterfall-col
+	{
+		width: @waterfall_l;
+		margin-right: @waterfall_i;
+		&:last-child
+		{
+			margin-right: 0px;
+		}
+		.w-item
+		{
+			position: relative;
+			width: @waterfall_l;
+			border-bottom: 2px solid #e3e3e3;
+			margin-bottom: 30px;
+			.w-item-inner
+			{
+				background: #fff;
+				border: 1px solid #eee;
+				padding-bottom: 10px;
+				.w-item-image 
+				{
+					position: relative;
+					min-height: 70px;
+					overflow: hidden;
+					a{
+						display: block;
+					 	.inner-i
+					 	{
+							border: none;
+							margin: 0px auto;
+							max-width: 233px;
+
+							width: 233px;
+							height: 140px;
+							&.l{width: 233px;height: 360px;}
+							&.m{width: 233px;height: 190px;}
+							&.s{width: 233px;height: 120px;}
+						}
+					}
+				}
+				.w-item-meta
+				{
+					padding: 10px 15px 0px 15px;
+					color: #666;
+					line-height:28px;
+					.inner-price{
+						font-size: 14px;
+						line-height: 28px;
+						span{ 
+							display: inline-block;
+							line-height: 28px;
+							margin-right: 5px;
+						}
+					}
+					.inner-like{
+
+						line-height: 28px;
+						.like-btn{
+							display: block;
+							font-size: 14px;
+							line-height: 28px;
+							height: 28px;
+							padding: 0px 15px 0px 10px;
+							.radius(2px);
+							background-color: #e5424b;
+							color: #fff;
+							i{ margin-right:10px;}
+						}
+					}
+				}
+				.w-item-desc
+				{
+					margin-top: 10px;
+					padding: 0px 15px;
+					color: #666;
+					font-size: 12px;
+					line-height: 20px;
+					p{
+						margin: 0px;
+						word-break: break-all;
+						word-wrap: break-word;
+					}
+					
+					i{
+					 	 
+						color: #ccc;
+						font-size: 14px;
+						line-height: 20px;
+					}
+					i.fa-quote-left{margin: 0px 4px 0px 0px;}
+					i.fa-quote-right{margin: 0px 0px 0px 4px;}
+
+				}
+				.w-item-story
+				{
+					margin-top: 10px;
+					padding: 0px 15px;
+					color: #333;
+					font-size: 12px;
+					line-height: 1.5;
+					p{
+						margin: 0px;
+						word-break: break-all;
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+	}
+}

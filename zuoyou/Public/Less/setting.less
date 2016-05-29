@@ -1,0 +1,69 @@
+@Imgpath:'../Css/Image';
+// 外阴影
+// @style: (x y blur)
+// @color: #ccc
+.box-shadow(@style, @color)  {
+	-webkit-box-shadow: @style @color;
+	-moz-box-shadow: 	@style @color;
+	-ms-box-shadow: 	@style @color;
+	-o-box-shadow: 		@style @color;
+	box-shadow:         @style @color;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box-shadow-inset(@style, @alpha: 50%) when (isnumber(@alpha)) {
+    -webkit-box-shadow: @style rgba(0, 0, 0, @alpha) inset;
+	-moz-box-shadow: 	@style rgba(0, 0, 0, @alpha) inset;
+	-ms-box-shadow: 	@style rgba(0, 0, 0, @alpha) inset;
+	-o-box-shadow: 		@style rgba(0, 0, 0, @alpha) inset;
+	box-shadow:         @style rgba(0, 0, 0, @alpha) inset;
+}
+
+// 圆角 Mixins
+.radius(@radius: 5px) {
+	-webkit-border-radius: 	@radius;
+	-moz-border-radius: 	@radius;
+	border-radius: 			@radius;
+}
+// 透明度
+.opacity(@opacity){
+	@ieOpacity : @opacity * 100; 
+    filter:~"alpha(opacity= @{ieOpacity})";  //IE5-7
+    -ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";//IE8
+    -khtml-opacity: @opacity;
+    -moz-opacity:	@opacity;
+    opacity: 		@opacity;  
+}  
+// 变形 Mixin
+.transform (skew, @degree1 ,rotate, @degree2) {
+	-webkit-transform: 	skew(@degree1) rotate(@degree2);
+	-moz-transform: 	skew(@degree1) rotate(@degree2);
+	-ms-transform: 		skew(@degree1) rotate(@degree2);
+	-o-transform: 		skew(@degree1) rotate(@degree2);
+	transform: 			skew(@degree1) rotate(@degree2);
+}
+// 移动
+.transition(...){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+// 无选中
+.noselect(){
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+.border-box(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nowarp(){
+	white-space: nowrap;
+}
