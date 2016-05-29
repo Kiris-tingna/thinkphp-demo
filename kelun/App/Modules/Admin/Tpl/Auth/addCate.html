@@ -1,0 +1,49 @@
+<extend name="Auth:templateAuth" />
+<block name="container">
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-2">
+			<!-- 引入左侧菜单 -->
+			<include file="Common:l" />
+		</div>
+		<div class="col-xs-10">
+			<!-- 右侧 -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">添加栏目</h3>
+				</div>
+				<div class="panel-body">
+					<form role="form" class="form-horizontal" action="{:U(GROUP_NAME.'/Auth/addCateHandle')}" method="post">
+						<div class="form-group">
+							<div class="col-sm-1"></div>
+							<div class="input-group col-sm-7">
+								<div class="input-group-addon">栏目名称</div>
+								<input type="text" class="form-control" name="name" id="name" placeholder="Enter nav name">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-1"></div>
+							<div class="input-group col-sm-7">
+								<div class="input-group-addon">栏目链接</div>
+								<input type="text" class="form-control" name="nlink" id="nlink" placeholder="Enter nav link">
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<div class="col-sm-1"></div>
+							<div class="input-group col-sm-7">
+								<input type="submit" class="btn btn-success" value="添加">
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</block>

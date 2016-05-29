@@ -1,0 +1,27 @@
+<extend name="Common:template" /> 
+
+<block name="container">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-2">
+            <!-- 引入左侧菜单 -->
+            <include file="Ship:l" />
+        </div>
+        <div class="col-xs-10">
+        <form role="form" class="form-horizontal" action="{:U(GROUP_NAME.'/Ship/updateHandle')}" method="post">
+            <input type="hidden" name="ship_id" value="{$re.ship_id}" />
+            <input type="text" name="ship_num" placeholder="客轮号" value="{$re.ship_num}"/>
+            <input type="text" name="start" placeholder="起点" value="{$re.start}"/>
+            <input type="text" name="end" placeholder="终点" value="{$re.end}"/>
+            <input type="date" name="date" placeholder="日期" value="{$re.date}"/>
+            <input type="text" name="begin" placeholder="开出时刻" value="{$re.begin}"/>
+            <input type="text" name="arrival" placeholder="到达时刻" value="{$re.arrival}"/>
+            <input type="text" name="level" placeholder="舱位等级" value="{$re.level}"/>
+            <input type="number" name="price" placeholder="票价" value="{$re.price}"/>
+            <input type="text" name="intiliaze_num" placeholder="预设座位" value="{$re.intiliaze_num}"/>
+
+            <input type="submit" value="修改"/>
+        </form>
+        </div>
+    </div>
+</block>

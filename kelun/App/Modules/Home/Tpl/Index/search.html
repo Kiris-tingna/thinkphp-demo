@@ -1,0 +1,60 @@
+<extend name="Index:Template" />
+<block name="container">
+    <style>
+    .mu>div>span{
+        display: inline-block;
+        width: 100px;
+        margin: 10px 0px;
+    }
+    </style>
+    <div class="am-u-sm-10">
+
+    <div class="am-tabs" data-am-tabs>
+  <ul class="am-tabs-nav am-nav am-nav-tabs">
+    <li class="am-active"><a href="#tab1">票务信息</a></li>
+    <li><a href="#tab2">客轮信息</a></li>
+  </ul>
+
+  <div class="am-tabs-bd">
+    <div class="am-tab-panel am-active" id="tab1">
+    <div class="am-g mu">
+    <div class="am-u-sm-12"><span class="am-text-secondary">客轮号</span><span class="am-text-xs">{$ship.ship_num}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">舱位等级</span><span class="am-text-xs">{$ship.level}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">票价</span><span class="am-text-xs">{$ship.price}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">起点</span><span class="am-text-xs">{$ship.start}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">终点</span><span class="am-text-xs">{$ship.end}</span></div>
+    <div class="am-u-sm-12"><span class="am-text-secondary">日期</span><span class="am-text-xs" style="width:200px">{$ship.date}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">开出时间</span><span class="am-text-xs">{$ship.begin}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">达到时刻</span><span class="am-text-xs">{$ship.arrival}</span></div>
+    <div class="am-u-sm-12"><span class="am-text-secondary">剩余舱位数</span><span class="am-text-xs">{$ship.remain_num}</span></div>
+    </div>
+  </div>
+
+    <div class="am-tab-panel" id="tab2">
+        <div class="am-tab-panel am-active" id="tab1">
+    <div class="am-g mu">
+    <div class="am-u-sm-12"><span class="am-text-secondary">姓名</span><span class="am-text-xs">{$re.name}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">身份证号码</span><span class="am-text-xs">{$re.passport_id}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">客船号</span><span class="am-text-xs">{$ship.ship_num}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">日期</span><span class="am-text-xs">{$re.date}</span></div>
+    <div class="am-u-sm-6"><span class="am-text-secondary">保险状态</span><span class="am-text-xs"><if condition="$re['is_baoxian'] eq 1">
+            <span class="am-badge am-badge-success">已保险</span>
+            <else />
+            <span class="am-badge am-badge-danger">未保险</span>
+        </if></span></div>
+    <div class="am-u-sm-12"><span class="am-text-secondary">订票状态</span><span class="am-text-xs"><if condition="$re['state'] eq 1">
+            <span class="am-badge am-badge-success">SUCCESS</span>
+            <else />
+            <span class="am-badge am-badge-danger">FAIL</span>
+        </if></span></div>
+    
+    </div>
+  </div>
+  
+    </div>
+</div>
+  </div>
+</div>
+
+
+</block>

@@ -1,0 +1,36 @@
+<extend name="Index:Template" /> 
+<block name="container">
+<form class="am-form am-form-horizontal" action="{:U(GROUP_NAME.'/Index/orderHandel')}" method="post">
+    <input type="hidden" name="ship_id" value = "{$order_id}"/>
+    <div class="am-form-group">
+    <label for="doc-ipt-3-a" class="am-u-sm-2 am-form-label">您的姓名</label>
+    <div class="am-u-sm-10">
+        <input type="text" id="doc-ipt-3-a" class="am-form-field" name="name" placeholder="姓名">
+    </div>
+    </div>
+    <div class="am-form-group">
+    <label for="doc-ipt-3-a" class="am-u-sm-2 am-form-label">身份证号</label>
+    <div class="am-u-sm-10">
+        <input type="text" id="doc-ipt-3-a" class="am-form-field" name="passport_id" placeholder="身份证号码">
+    </div>
+    </div>
+    <div class="am-form-group">
+    <label for="doc-ipt-3-a" class="am-u-sm-2 am-form-label">订票日期</label>
+    <div class="am-u-sm-10">
+        <input type="text" id="doc-ipt-3-a" class="am-form-field" name="date" placeholder="日期">
+    </div>
+    </div>
+    <div class="am-form-group">
+    <label for="doc-ipt-3-a" class="am-u-sm-2 am-form-label">是否保险</label>
+    <div class="am-u-sm-10">
+        <input type="text" id="doc-ipt-3-a" class="am-form-field" name="is_baoxian" placeholder="是否保险">
+    </div>
+    </div>
+    <div class="am-form-group">
+    <div class="am-u-sm-10 am-u-sm-offset-2">
+        <input type="submit" class="am-btn am-btn-default" value="提交订票"/>
+    </div>
+  </div>
+
+</form>
+</block>

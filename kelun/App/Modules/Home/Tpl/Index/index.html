@@ -1,0 +1,70 @@
+<extend name="Index:Template" />
+<block name="container">
+
+<div class="am-u-md-4 am-fr" style="margin-top:65px">
+<form  class="am-form am-form-horizontal" action="{:U(GROUP_NAME.'/Index/search')}" method="post">
+    
+    <p><input type="text" name="passport_id" placeholder="身份证号码" class="am-form-field am-radius"/></p>
+    <input type="submit"  class="am-btn am-btn-secondary am-btn-xs" value="搜索"/>
+</form>
+</div>
+
+<div class="am-u-md-6 am-fl">
+<form  class="am-form am-form-inline" action="{:U(GROUP_NAME.'/Index/index_s')}" method="post">
+    <p>
+    <input type="text" name="start" placeholder="起点" class="am-form-field am-round"/></p>
+    <p>
+    <input type="text" name="end" placeholder="终点" class="am-form-field am-round"/></p>
+    <button type="submit" class="am-btn am-btn-secondary am-btn-xs">搜索</button>
+
+</form>
+</div>
+
+<div class="am-u-md-10 am-scrollable-horizontal am-margin-top-sm">
+  <table class="am-table am-table-bordered am-table-striped am-table-compact">
+<thead>
+    <tr>
+    <th>客轮号</th>
+    <th>起点</th>
+    <th>终点</th>
+    <th>日期</th>
+    <th>开出时间</th>
+    <th>达到时刻</th>
+    <th>舱位等级</th>
+    <th>票价</th>
+    <th>剩余舱位数</th>
+    <th>操作</th>
+    </tr>
+</thead>
+<tbody>
+    <foreach name="result" item="v">
+<tr>
+    <td>{$v.ship_num}</td>
+    <td>{$v.start}</td>
+    <td>{$v.end}</td>
+    <td>{$v.date}</td>
+    <td>{$v.begin}</td>
+    <td>{$v.arrival}</td>
+    <td>{$v.level}</td>
+    <td>{$v.price}</td>
+    <td>{$v.remain_num}</td>
+    <td>
+        <if condition="$v['remain_num'] neq 0">
+        <a class="am-btn am-btn-warning am-btn-sm" href="{:U(GROUP_NAME.'/Index/order',['id'=>$v['ship_id']])}">
+        <i class="am-icon-shopping-cart"></i>
+        订票
+        </a>
+        <else/>
+        <a class="am-btn am-btn-warning am-btn-sm am-disabled" href="{:U(GROUP_NAME.'/Index/order',['id'=>$v['ship_id']])}">
+        <i class="am-icon-shopping-cart"></i>
+        订票
+        </a>
+        </if>
+    </td>
+</tr>
+    </foreach>
+</tbody>
+  </table>
+</div>
+
+</block>

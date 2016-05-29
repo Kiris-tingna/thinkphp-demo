@@ -1,0 +1,69 @@
+<extend name="Common:template" /> 
+
+<block name="container">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-2">
+            <!-- 引入左侧菜单 -->
+            <include file="Ship:l" />
+        </div>
+        <div class="col-xs-10">
+<form class="form-horizontal" action="{:U(GROUP_NAME.'/Ship/addHandle')}" method="post">
+  <div class="form-group">
+    <label for="input1" class="col-sm-2 control-label">客轮号</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="ship_num" id="input1" placeholder="客轮号"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input2" class="col-sm-2 control-label">起点</label>
+    <div class="col-sm-10">
+      <input type="text" name="start"class="form-control" id="input2" placeholder="起点"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input3" class="col-sm-2 control-label">终点</label>
+    <div class="col-sm-10">
+      <input type="text" name="end" class="form-control" id="input3" placeholder="终点"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input4" class="col-sm-2 control-label">开出时刻</label>
+    <div class="col-sm-10">
+      <input type="date" name="begin" class="form-control" id="input4" placeholder="开出时刻"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input5" class="col-sm-2 control-label">到达时刻</label>
+    <div class="col-sm-10">
+      <input type="date" name="arrival" class="form-control" id="input5" placeholder="到达时刻"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input6" class="col-sm-2 control-label">舱位等级</label>
+    <div class="col-sm-10">
+      <input type="text" name="level" class="form-control" id="input6" placeholder="舱位等级"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input7" class="col-sm-2 control-label">票价</label>
+    <div class="col-sm-10">
+      <input type="number" name="price" class="form-control" id="input7"  placeholder="票价"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="input8" class="col-sm-2 control-label">预设座位</label>
+    <div class="col-sm-10">
+      <input type="text" name="intiliaze_num" class="form-control" id="input8" placeholder="预设座位"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">提交</button>
+    </div>
+  </div>
+</form>
+        </div>
+    </div>
+</block>

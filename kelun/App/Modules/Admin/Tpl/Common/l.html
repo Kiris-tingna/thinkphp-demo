@@ -1,0 +1,12 @@
+<php>
+	$cate=M('cate')->select();
+</php>
+<div class="list-group">
+	<!-- bootstrap列表样式 -->
+	<a href="#" class="list-group-item active">权限管理</a>
+	<foreach name="cate" item="c">
+		<if condition="authcheck(GROUP_NAME.'/'.$c[alink],$_SESSION['uid'])">
+			<a href="{:U("$c[alink]")}" class="list-group-item">{$c.catename} </a>
+		</if>
+	</foreach>
+</div>
